@@ -1,5 +1,13 @@
 server:
   port: 6868
-eureka:  instance:    hostname: localhost
-  client:    service-url:      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/    fetch-registry: false
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    fetch-registry: false
     register-with-eureka: false
+spring:
+  rabbitmq:
+    host: 127.0.0.1
