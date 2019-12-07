@@ -1,8 +1,17 @@
 server:
   port: 9003
-spring:  application:    name: caidan-managereureka:  client:    service-url:      defaultZone: http://localhost:6868/eureka/
-  instance:    prefer-ip-address: true
-zuul:  routes:    caidan-user:
+spring:
+  application:
+    name: caidan-manager
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    caidan-user:
       path: /api-user/**
       service-id: caidan-user
     caidan-quartz:
@@ -12,6 +21,9 @@ zuul:  routes:    caidan-user:
 jwt:
   config:
     key: caidan
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
 
   
       
