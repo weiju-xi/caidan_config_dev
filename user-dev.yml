@@ -24,6 +24,7 @@ eureka:
 feign:
   hystrix:
     enabled: true
+    
 jwt:
   config:
     key:caidan
