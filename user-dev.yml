@@ -29,6 +29,16 @@ jwt:
   config:
     key: caidan
     ttl: 3600000
-  
+ 
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.caidan.pojo
+ 
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
       
       
