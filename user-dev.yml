@@ -27,8 +27,8 @@ feign:
     
 jwt:
   config:
-    key:caidan
-    ttl:3600000
+    key: caidan
+    ttl: 3600000
   
       
       
